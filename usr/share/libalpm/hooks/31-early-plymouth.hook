@@ -4,6 +4,11 @@ Operation = Install
 Operation = Upgrade
 Target = /usr/lib/initcpio/hooks/plymouth
 
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Target = faster-mkinitcpio
+
 [Action]
 Description = Change plymouth config
 When = PostTransaction

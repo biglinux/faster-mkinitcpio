@@ -5,6 +5,7 @@ Operation = Upgrade
 Target = etc/mkinitcpio.d/*
 
 [Trigger]
+Type = Package
 Operation = Install
 Operation = Upgrade
 Target = faster-mkinitcpio

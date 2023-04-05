@@ -5,6 +5,7 @@ Operation = Upgrade
 Target = /usr/lib/initcpio/hooks/plymouth
 
 [Trigger]
+Type = Package
 Operation = Install
 Operation = Upgrade
 Target = faster-mkinitcpio

@@ -1,0 +1,10 @@
+[Trigger]
+Type = Path
+Operation = Install
+Operation = Upgrade
+Target = etc/mkinitcpio.d/*
+
+[Action]
+Description = Change mkinitcpio config
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/faster-mkinitcpio

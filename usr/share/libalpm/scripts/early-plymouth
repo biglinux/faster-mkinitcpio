@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sed -i 's|--attach-to-session$|--attach-to-session; /usr/bin/plymouth --show-splash|g' /usr/lib/initcpio/hooks/plymouth

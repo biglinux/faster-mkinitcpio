@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
+sed -i "s|PRESETS=('default' 'fallback')|PRESETS=('default')|g" /usr/share/mkinitcpio/hook.preset
 sed -i "s|PRESETS=('default' 'fallback')|PRESETS=('default')|g" /etc/mkinitcpio.d/*

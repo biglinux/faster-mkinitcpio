@@ -2,7 +2,7 @@
 Type = Path
 Operation = Install
 Operation = Upgrade
-Target = etc/mkinitcpio.d/*
+Target = usr/share/mkinitcpio/hook.preset
 
 [Trigger]
 Type = Package

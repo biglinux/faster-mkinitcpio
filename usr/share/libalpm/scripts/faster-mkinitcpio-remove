@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+sed -i "s|PRESETS=('default')|PRESETS=('default' 'fallback')|g" /usr/share/mkinitcpio/hook.preset
+sed -i "s|PRESETS=('default')|PRESETS=('default' 'fallback')|g" /etc/mkinitcpio.d/*

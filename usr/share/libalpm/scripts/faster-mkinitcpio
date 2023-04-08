@@ -2,3 +2,10 @@
 
 sed -i "s|PRESETS=('default' 'fallback')|PRESETS=('default')|g" /usr/share/mkinitcpio/hook.preset
 sed -i "s|PRESETS=('default' 'fallback')|PRESETS=('default')|g" /etc/mkinitcpio.d/*
+
+
+# add messages in plymouth
+if [ "$(grep plymouth /usr/lib/initcpio/init_functions)" = "" ]; then
+    sed -i '/\[ "${quiet}" != "y" \] && echo "$@"/a msg_a1=${@/::/}; msg_a2=${msg_a1/-n/}; /usr/bin/plymouth display-message --text="${msg_a2/done./}"' /usr/lib/initcpio/init_functions
+    sed -i '/echo "ERROR: \$\*"/a /usr/bin/plymouth display-message --text="ERROR: $*"' /usr/lib/initcpio/init_functions
+fi

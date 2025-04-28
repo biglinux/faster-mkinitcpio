@@ -9,3 +9,8 @@ if [ "$(grep plymouth /usr/lib/initcpio/init_functions)" = "" ]; then
     sed -i '/\[ "${quiet}" != "y" \] && echo "$@"/a msg_a1=${@/::/}; msg_a2=${msg_a1/-n/}; /usr/bin/plymouth display-message --text="${msg_a2/done./}"' /usr/lib/initcpio/init_functions
     sed -i '/echo "ERROR: \$\*"/a /usr/bin/plymouth display-message --text="ERROR: $*"' /usr/lib/initcpio/init_functions
 fi
+
+
+# fix crc32c_intel
+sed -i '/MODULES=/s/crc32c-intel/crc32c/' /etc/mkinitcpio.conf
+

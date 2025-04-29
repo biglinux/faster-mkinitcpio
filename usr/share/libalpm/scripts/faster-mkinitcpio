@@ -11,6 +11,6 @@ if [ "$(grep plymouth /usr/lib/initcpio/init_functions)" = "" ]; then
 fi
 
 
-# fix crc32c_intel
-sed -i '/MODULES=/s/crc32c-intel/crc32c/' /etc/mkinitcpio.conf
+# # fix crc32c_intel
+# sed -i '/MODULES=/s/crc32c-intel/crc32c/' /etc/mkinitcpio.conf
 
